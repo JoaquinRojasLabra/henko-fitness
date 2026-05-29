@@ -1,7 +1,7 @@
 import { useRef, useState, useCallback, useEffect } from "react";
 import { motion, useSpring, useTransform } from "framer-motion";
 
-export function Spotlight({ className, size = 300, springOptions = { bounce: 0 } }) {
+export function Spotlight({ className, size = 700, springOptions = { stiffness: 120, damping: 18, mass: 0.8 } }) {
   const containerRef = useRef(null);
   const [isHovered, setIsHovered] = useState(false);
   const [parentElement, setParentElement] = useState(null);
@@ -39,10 +39,10 @@ export function Spotlight({ className, size = 300, springOptions = { bounce: 0 }
   return (
     <motion.div
       ref={containerRef}
-      className={`pointer-events-none absolute rounded-full blur-2xl transition-opacity duration-300 ${isHovered ? "opacity-100" : "opacity-0"} ${className || ""}`}
+      className={`pointer-events-none absolute rounded-full blur-3xl transition-opacity duration-500 ${isHovered ? "opacity-100" : "opacity-0"} ${className || ""}`}
       style={{
         width: size, height: size, left: spotlightLeft, top: spotlightTop,
-        background: "radial-gradient(circle at center, oklch(0.55 0.22 27 / 0.35) 0%, oklch(0.55 0.22 27 / 0.12) 30%, transparent 70%)",
+        background: "radial-gradient(circle at center, oklch(0.55 0.22 27 / 0.5) 0%, oklch(0.55 0.22 27 / 0.2) 30%, transparent 70%)",
       }}
     />
   );

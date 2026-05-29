@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import henkoLogo from "../assets/henko-logo.png";
 
 const links = [
   { label: "Disciplinas", href: "#disciplinas" },
@@ -32,6 +33,7 @@ export default function Navbar() {
         }`}
       >
         <a href="#" className="flex items-center gap-2">
+          <img src={henkoLogo} alt="HENKO FITNESS" className="size-9 object-contain" />
           <span className="text-[var(--primary)] text-xl font-display tracking-wide">HENKO</span>
           <span className="text-[var(--muted)] text-sm font-sans hidden sm:inline">FITNESS</span>
         </a>

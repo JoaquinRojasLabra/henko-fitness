@@ -1,18 +1,13 @@
 import { motion } from "framer-motion";
-import heroImg from "../assets/hero-gym.jpg";
-import logo from "../assets/henko-logo.png";
 import { Spotlight } from "./Spotlight";
+import henkoLogo from "../assets/henko-logo.png";
 
 export default function Hero() {
   return (
     <section className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden">
-      <Spotlight size={500} />
-      <div className="absolute inset-0">
-        <img src={heroImg} alt="" width={1920} height={1080}
-          className="h-full w-full object-cover" />
-        <div className="absolute inset-0 bg-[var(--sumi)]/70" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg)] via-[var(--bg)]/40 to-[var(--bg)]/70" />
-      </div>
+      <Spotlight size={700} />
+      <div className="absolute inset-0 bg-gradient-to-b from-[var(--primary)]/15 via-transparent to-[var(--bg)] pointer-events-none" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-[var(--primary)]/8 rounded-full blur-[120px] pointer-events-none" />
 
       <motion.span
         initial={{ opacity: 0 }}
@@ -25,20 +20,6 @@ export default function Hero() {
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 pt-24 pb-16 text-center">
         <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.9, delay: 0.2, ease: "easeOut" }}
-          className="mb-6 flex justify-center"
-        >
-          <div className="relative">
-            <div className="absolute inset-0 animate-spin-slow rounded-full border-2 border-dashed border-[var(--primary)]/20"
-              style={{ width: 140, height: 140, left: -20, top: -20 }} />
-            <img src={logo} alt="HENKO FITNESS"
-              className="size-[100px] animate-float-slow drop-shadow-[0_0_40px_rgba(200,80,60,0.3)]" />
-          </div>
-        </motion.div>
-
-        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -48,6 +29,23 @@ export default function Hero() {
             <span className="size-2 rounded-full bg-[var(--primary)]" />
             CENTRO DEPORTIVO · PAINE, CHILE
           </span>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.9, delay: 0.2, ease: "easeOut" }}
+          className="mb-6 flex justify-center"
+        >
+          <div className="relative">
+            <div className="absolute inset-0 animate-spin-slow rounded-full border-2 border-dashed border-[var(--primary)]/20"
+              style={{ width: 220, height: 220, left: -30, top: -30 }} />
+            <img
+              src={henkoLogo}
+              alt="HENKO FITNESS"
+              className="size-40 object-contain animate-float-slow drop-shadow-[0_0_60px_rgba(200,80,60,0.4)]"
+            />
+          </div>
         </motion.div>
 
         <motion.h1
