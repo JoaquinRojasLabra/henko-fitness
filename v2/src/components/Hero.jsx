@@ -42,18 +42,8 @@ export default function Hero() {
           <div className="relative">
             <div className="absolute inset-0 animate-spin-slow rounded-full border-2 border-dashed border-[var(--primary)]/20"
               style={{ width: 140, height: 140, left: -20, top: -20 }} />
-            <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"
-              className="drop-shadow-[0_0_40px_rgba(200,80,60,0.3)] animate-float-slow">
-              <ellipse cx="50" cy="65" rx="28" ry="30" fill="var(--primary)" />
-              <rect x="35" y="38" width="30" height="10" rx="5" fill="var(--primary)" />
-              <path d="M38 43 Q50 30 62 43" stroke="var(--primary)" strokeWidth="6" fill="none" strokeLinecap="round" />
-              <ellipse cx="50" cy="63" rx="6" ry="3" fill="var(--bg)" />
-              <rect x="44" y="68" width="12" height="2" rx="1" fill="var(--bg)" />
-              <circle cx="42" cy="52" r="2.5" fill="var(--bg)" />
-              <circle cx="58" cy="52" r="2.5" fill="var(--bg)" />
-              <circle cx="58" cy="52" r="1.8" fill="var(--fg)" />
-              <path d="M45 55 Q50 58 55 55" stroke="var(--bg)" strokeWidth="1.5" fill="none" strokeLinecap="round" />
-            </svg>
+            <img src="/henko-logo.png" alt="Henko Fitness"
+              className="size-[100px] animate-float-slow drop-shadow-[0_0_40px_rgba(200,80,60,0.3)]" />
           </div>
         </motion.div>
 
