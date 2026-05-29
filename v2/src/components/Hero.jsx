@@ -49,8 +49,8 @@ export default function Hero() {
         </motion.div>
 
         <h1 className="font-display text-6xl sm:text-7xl md:text-8xl leading-[0.92] tracking-wide mb-4">
-          <AnimatedText text="FORJA TU" delay={0.2} />
-          <span className="text-[var(--primary)]"><AnimatedText text="CAMBIO." delay={0.35} /></span>
+          <AnimatedText text="FORJA TU" delay={0.2} as="span" />
+          <span className="text-[var(--primary)]"><AnimatedText text="CAMBIO." delay={0.35} as="span" /></span>
         </h1>
 
         <motion.p
