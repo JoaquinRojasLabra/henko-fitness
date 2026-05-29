@@ -1,19 +1,13 @@
 import { motion } from "framer-motion";
-import heroImg from "../assets/hero-gym.jpg";
-import logo from "../assets/henko-logo.png";
-import { Spotlight } from "./Spotlight";
+import { Barbell, MapPin } from "@phosphor-icons/react";
 
 export default function Hero() {
   return (
     <section className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden">
-      <Spotlight size={500} />
-      <div className="absolute inset-0">
-        <img src={heroImg} alt="" width={1920} height={1080}
-          className="h-full w-full object-cover" />
-        <div className="absolute inset-0 bg-[var(--sumi)]/70" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg)] via-[var(--bg)]/40 to-[var(--bg)]/70" />
-      </div>
+      <div className="absolute inset-0 bg-gradient-to-b from-[var(--primary)]/15 via-transparent to-[var(--bg)] pointer-events-none" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-[var(--primary)]/8 rounded-full blur-[120px] pointer-events-none" />
 
+      {/* Giant kanji accent - from Lovable */}
       <motion.span
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.05 }}
@@ -25,20 +19,6 @@ export default function Hero() {
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 pt-24 pb-16 text-center">
         <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.9, delay: 0.2, ease: "easeOut" }}
-          className="mb-6 flex justify-center"
-        >
-          <div className="relative">
-            <div className="absolute inset-0 animate-spin-slow rounded-full border-2 border-dashed border-[var(--primary)]/20"
-              style={{ width: 140, height: 140, left: -20, top: -20 }} />
-            <img src={logo} alt="HENKO FITNESS"
-              className="size-[100px] animate-float-slow drop-shadow-[0_0_40px_rgba(200,80,60,0.3)]" />
-          </div>
-        </motion.div>
-
-        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -48,6 +28,30 @@ export default function Hero() {
             <span className="size-2 rounded-full bg-[var(--primary)]" />
             CENTRO DEPORTIVO · PAINE, CHILE
           </span>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.9, delay: 0.2, ease: "easeOut" }}
+          className="mb-6 flex justify-center"
+        >
+          <div className="relative">
+            <div className="absolute inset-0 animate-spin-slow rounded-full border-2 border-dashed border-[var(--primary)]/20"
+              style={{ width: 140, height: 140, left: -20, top: -20 }} />
+            <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"
+              className="drop-shadow-[0_0_40px_rgba(200,80,60,0.3)] animate-float-slow">
+              <ellipse cx="50" cy="65" rx="28" ry="30" fill="var(--primary)" />
+              <rect x="35" y="38" width="30" height="10" rx="5" fill="var(--primary)" />
+              <path d="M38 43 Q50 30 62 43" stroke="var(--primary)" strokeWidth="6" fill="none" strokeLinecap="round" />
+              <ellipse cx="50" cy="63" rx="6" ry="3" fill="var(--bg)" />
+              <rect x="44" y="68" width="12" height="2" rx="1" fill="var(--bg)" />
+              <circle cx="42" cy="52" r="2.5" fill="var(--bg)" />
+              <circle cx="58" cy="52" r="2.5" fill="var(--bg)" />
+              <circle cx="58" cy="52" r="1.8" fill="var(--fg)" />
+              <path d="M45 55 Q50 58 55 55" stroke="var(--bg)" strokeWidth="1.5" fill="none" strokeLinecap="round" />
+            </svg>
+          </div>
         </motion.div>
 
         <motion.h1
