@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Barbell, MapPin } from "@phosphor-icons/react";
 import { Spotlight } from "./Spotlight";
 import { AnimatedText } from "./AnimatedText";
+import henkoLogo from "../assets/henko-logo.png";
 
 export default function Hero() {
   return (
@@ -42,16 +43,15 @@ export default function Hero() {
           <div className="relative">
             <div className="absolute inset-0 animate-spin-slow rounded-full border-2 border-dashed border-[var(--primary)]/20"
               style={{ width: 140, height: 140, left: -20, top: -20 }} />
-            <img src="/henko-logo.png" alt="Henko Fitness"
+            <img src={henkoLogo} alt="Henko Fitness"
               className="size-[100px] animate-float-slow drop-shadow-[0_0_40px_rgba(200,80,60,0.3)]" />
           </div>
         </motion.div>
 
-        <AnimatedText
-          text="FORJA TU CAMBIO."
-          className="font-display text-6xl sm:text-7xl md:text-8xl leading-[0.92] tracking-wide mb-4"
-          delay={0.2}
-        />
+        <h1 className="font-display text-6xl sm:text-7xl md:text-8xl leading-[0.92] tracking-wide mb-4">
+          <AnimatedText text="FORJA TU" delay={0.2} />
+          <span className="text-[var(--primary)]"><AnimatedText text="CAMBIO." delay={0.35} /></span>
+        </h1>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
