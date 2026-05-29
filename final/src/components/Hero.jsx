@@ -1,14 +1,13 @@
 import { motion } from "framer-motion";
 import { Barbell, MapPin } from "@phosphor-icons/react";
-import { Spotlight } from "./Spotlight";
 
 export default function Hero() {
   return (
     <section className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden">
-      <Spotlight size={500} />
       <div className="absolute inset-0 bg-gradient-to-b from-[var(--primary)]/15 via-transparent to-[var(--bg)] pointer-events-none" />
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-[var(--primary)]/8 rounded-full blur-[120px] pointer-events-none" />
 
+      {/* Giant kanji accent - from Lovable */}
       <motion.span
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.05 }}
