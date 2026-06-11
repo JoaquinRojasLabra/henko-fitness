@@ -6,14 +6,12 @@ Centro deportivo en Paine, Chile. CrossFit, GAP, Gimnasia y Halterofilia.
 
 | Carpeta | Descripción |
 |---------|-------------|
-| `lovable/` | Versión original hecha con Lovable. Estética japonesa sumi-e, kanjis, TanStack Start. |
-| `opencode/` | Versión hecha con OpenCode (DeepSeek). Fondo animado, más secciones (Planes, Horarios, Galería). |
-| `final/` | Fusión de ambas. Estética japonesa + fondo animado + todas las secciones. |
+| `v1/` | Landing page. Stack: Vite + React + Framer Motion + Tailwind CSS. |
+| `v2/` | App completa con panel de administración y Supabase. |
 
-## Cómo correr cada versión
+## Cómo correr el proyecto
 
 ```bash
-cd lovable   && npm install && npm run dev
-cd opencode  && npm install && npm run dev
-cd final     && npm install && npm run dev
+cd v1   && npm install && npm run dev
+cd v2   && npm install && npm run dev
 ```
